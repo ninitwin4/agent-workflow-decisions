@@ -17,10 +17,11 @@ new record that supersedes the old one rather than editing it.
 
 ## Decisions so far
 
-| #   | Decision                                                      | Status   |
-| --- | ------------------------------------------------------------- | -------- |
-| 000 | [Keep AGENTS.md lean](decisions/000-lean-agents-md.md)        | Accepted |
-| 001 | [Route tasks by first unknown](decisions/001-tier-routing.md) | Draft    |
+| #   | Decision                                                                       | Status   |
+| --- | ------------------------------------------------------------------------------ | -------- |
+| 000 | [Build the context layer first](decisions/000-context-before-orchestration.md) | Accepted |
+| 001 | Keep AGENTS.md lean | Draft (not yet written) |
+| 002 | Route tasks by first unknown | Draft (not yet written) |
 
 ## Planned
 
