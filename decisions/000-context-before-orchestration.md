@@ -3,6 +3,9 @@
 **Status:** Accepted
 **Date:** 2026-09-21
 
+> **Takeaway:** Verify your context file against the code before building
+> any agents. Every agent inherits its mistakes.
+
 ## Context
 
 I'm building a multi-agent workflow (research / plan / build / review)

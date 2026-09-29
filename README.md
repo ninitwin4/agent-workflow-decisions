@@ -20,10 +20,11 @@ new record that supersedes the old one rather than editing it.
 | #   | Decision                                                                       | Status   |
 | --- | ------------------------------------------------------------------------------ | -------- |
 | 000 | [Build the context layer first](decisions/000-context-before-orchestration.md) | Accepted |
-| 001 | Keep AGENTS.md lean | Draft (not yet written) |
-| 002 | Route tasks by first unknown | Draft (not yet written) |
+| 001 | [Keep AGENTS.md lean](decisions/001-lean-agents-md.md)                         | Accepted |
+| 002 | [Move sometimes-needed knowledge into skills](decisions/002-on-demand-skills.md) | Draft    |
 
 ## Planned
 
+- Route tasks by first unknown (tiers, so small tasks skip the pipeline)
 - Subagents (scoped, to control token cost)
 - The handoff artifact (so each stage can start cold)

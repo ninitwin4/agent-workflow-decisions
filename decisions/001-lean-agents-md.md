@@ -1,4 +1,10 @@
-# 000 — Keep AGENTS.md lean: only what an agent would get wrong
+# 001 — Keep AGENTS.md lean: only what an agent would get wrong
+
+**Status:** Accepted
+**Date:** 2026-09-21
+
+> **Takeaway:** Only put in AGENTS.md what an agent would get wrong from
+> reading the code. Every line costs tokens in every session.
 
 ## Context
 
@@ -21,6 +27,7 @@ the code. Nothing inferable: no directory trees, no tech-stack lists.
 
 - The file is hand-written, not generated.
 - It lives at the repo root (563 words as of this record).
+  See the [live file](https://github.com/ninitwin4/matching-engine/blob/main/AGENTS.md).
 - CLAUDE.md is one line, `@AGENTS.md`, so there is a single source of
   truth across tools.
 - Anything needed only sometimes goes in an on-demand skill, not here.
