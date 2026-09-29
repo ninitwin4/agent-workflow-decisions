@@ -1,6 +1,6 @@
 # 002 — Move sometimes-needed knowledge into on-demand skills
 
-**Status:** Draft
+**Status:** Accepted
 **Date:** 2026-09-29
 
 > **Takeaway:** If only some tasks need it, make it a skill. The agent
@@ -45,7 +45,7 @@ loads when the task matches.
 
 ## Evidence
 
-Partially tested in a fresh session, without naming the skill.
+Tested with four prompts, each in a fresh session, without naming the skill.
 
 - **Loads when it should: pass.** Prompt: "The last AI-bonus eval came
   back 7/8 with ai-006 failing direction. What should I do?" The skill
@@ -55,6 +55,17 @@ Partially tested in a fresh session, without naming the skill.
   pin before the case": it found the `anthropic` pin had changed since the
   last run and gave that as a reason to re-run. It recommended the plain
   run over `--escalate` because the plain run is what users get.
-- **Not yet tested:** that it stays unloaded on unrelated work (a
-  frontend task, and a Tier 1 pytest task that the description
-  excludes), and a full run of a new eval case.
+- **Stays unloaded on unrelated work: pass.** Prompt: "Change the button
+  color on the results page in the frontend." The skill did not load.
+- **Respects its exclusion: pass.** Prompt: "Add a pytest test for the
+  Tier 1 scoring." The skill did not load, even though the prompt shares
+  words ("Tier", "scoring") with the skill's topic. The "Not for the
+  Tier 0/1 pytest suites" line in the description held.
+- **Loads on an editing task: pass.** Prompt: "Add a new eval case to
+  evals/cases/ai_bonus.json for a listing with no parking, then check
+  it." The skill loaded first. My prompt was flawed: every case compares
+  two roommate bios, so a listing case doesn't fit. The agent caught this
+  and stopped before editing. It offered alternatives and said it would
+  re-run once before calling a failure real.
+- **Not tested:** a full run of a new eval case, because the prompt
+  above never reached one.

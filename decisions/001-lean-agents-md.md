@@ -63,3 +63,10 @@ Result: pass.
 - Rule 1 (signed adjustment): followed without being told.
 - Rule 2 (verify before claiming done): the agent ran the cache-invalidation check instead of stopping at green tests.
 - Not tested: the healthcare rule. The task didn't touch healthcare.
+
+Follow-up (2026-09-29), during 002's testing:
+- Rule 3 (housing scores stay byte-identical): followed without being
+  told. Asked only to "add a pytest test for the Tier 1 scoring," the
+  agent noticed the existing tests only checked ranges and cited this
+  rule. It pinned exact scores, then raised a weight by 1e-9 to confirm
+  the new tests fail on drift that the range tests miss.
