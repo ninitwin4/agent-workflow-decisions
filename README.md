@@ -23,6 +23,13 @@ new record that supersedes the old one rather than editing it.
 | 001 | [Keep AGENTS.md lean](decisions/001-lean-agents-md.md)                         | Accepted |
 | 002 | [Move sometimes-needed knowledge into skills](decisions/002-on-demand-skills.md) | Accepted |
 
+## Other practices
+
+**Recap and next action.** I switch between agents and projects often.
+Every agent ends a whole task, or answers "recap", with a 1–3 line recap
+and what's waiting on me. It lives in my global `~/.claude/CLAUDE.md`,
+not the project AGENTS.md, because it's about how I work, not the code.
+
 ## Planned
 
 - Route tasks by first unknown (tiers, so small tasks skip the pipeline)
